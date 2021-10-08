@@ -1,0 +1,37 @@
+<h1>Signup</h1>
+<div class="row row-first row-even row-last">
+  <%= form_for :user, url: '/users' do |f| %>
+    <table>
+      <tr>
+        <td>Name:</td>
+        <td><%= f.text_field :name %></td>
+      </tr>
+      <tr>
+        <td>Height:</td>
+        <td><%= f.number_field :height %></td>
+      </tr>
+      <tr>
+        <td>Happiness:</td>
+        <td><%= f.number_field :happiness %></td>
+      </tr>
+      <tr>
+        <td>Nausea:</td>
+        <td><%= f.number_field :nausea %></td>
+      </tr>
+      <tr>
+        <td>Tickets:</td>
+        <td><%= f.number_field :tickets %></td>
+      </tr>
+      <tr>
+        <td>Password:</td>
+        <td><%= f.password_field :password %></td>
+      </tr>
+      <tr>
+        <td>Password Confirmation:</td>
+        <td><%= f.password_field :password_confirmation %></td>
+      </tr>
+
+    </table>
+    <%= f.submit "Create User" %>
+  <% end %>
+</div>
